@@ -13,13 +13,15 @@ model = SentenceTransformer("sentence-transformers/paraphrase-multilingual-MiniL
 
 TOKEN = "7804028306:AAFSpq_x_4i2-zzp8aGr4rglMrXa2rcbjU0"
 
-def get_connection():
+def get_db_connection():
     return psycopg2.connect(
-        host="localhost",
-        database="bot_db_final",
-        user="postgres",
-        password="dzireedzireE01@"
+        dbname="postgres",
+        user="postgres.yejjnjtxqeguwelcrngz",
+        password="dzireedzireE01",
+        host="aws-0-eu-central-1.pooler.supabase.com",
+        port="6543"
     )
+
 
 
 
