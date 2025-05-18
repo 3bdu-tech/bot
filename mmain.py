@@ -7,11 +7,17 @@ from sentence_transformers import SentenceTransformer, util
 import torch
 import datetime
 import re
-import spacy.cli
-spacy.cli.download("xx_ent_wiki_sm")
+
+try:
+    nlp = spacy.load("xx_ent_wiki_sm")
+except OSError:
+    import spacy.cli
+    spacy.cli.download("xx_ent_wiki_sm")
+    nlp = spacy.load("xx_ent_wiki_sm")
 
 
-nlp = spacy.load("xx_ent_wiki_sm")
+
+
 model = SentenceTransformer("sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2")
 
 TOKEN = "7804028306:AAFSpq_x_4i2-zzp8aGr4rglMrXa2rcbjU0"
