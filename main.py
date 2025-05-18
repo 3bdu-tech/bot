@@ -4,7 +4,7 @@ from flask import Flask, request
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, ContextTypes, filters
 
-from smart_bot_fully_contextual_final_ready_with_my_courses_updated import (
+from mmain import (
     TOKEN, start, start_course_registration, handle_user,
     show_my_lectures, show_my_exams, my_info, show_lectures, show_exams
 )
