@@ -12,3 +12,4 @@ spacy
 torch
 sentence-transformers
 fuzzywuzzy
+rapidfuzz
