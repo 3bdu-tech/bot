@@ -2,6 +2,7 @@
 import os
 from flask import Flask, request
 from telegram import Update
+import config
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, ContextTypes, filters
 
 from mmain import (
