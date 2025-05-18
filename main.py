@@ -11,6 +11,14 @@ from mmain import (
 
 app = Flask(__name__)
 bot_app = ApplicationBuilder().token(TOKEN).build()
+def get_db_connection():
+    return psycopg2.connect(
+        dbname="postgres",
+        user="postgres.yejjnjtxqeguwelcrngz",
+        password="dzireedzireE01",
+        host="aws-0-eu-central-1.pooler.supabase.com",
+        port="6543"
+    )
 
 bot_app.add_handler(CommandHandler("start", start))
 bot_app.add_handler(CommandHandler("register", start_course_registration))
